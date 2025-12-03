@@ -1,3 +1,4 @@
-def call(){
-  sh "docker-compose down && docker-compose up -d"
+
+def call(Map config = [:]) {
+    sh "docker compose up -d"
 }
