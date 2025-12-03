@@ -1,3 +1,4 @@
-def calll(string ProjectName, string ImageTag, string DockerHubUser){
-  sh "docker build -t ${DockerHubuser}/${ProjectName}:${ImageTag} ."
+// Define function
+def call(String ProjectName, String ImageTag, String DockerHubUser){
+  sh "docker build -t ${DockerHubUser}/${ProjectName}:${ImageTag} ."
 }
