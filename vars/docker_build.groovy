@@ -1,3 +1,7 @@
-def call(String projectName, String imageTag, String dockerHubUser) {
-    sh "docker build -t ${dockerHubUser}/${projectName}:${imageTag} ."
+
+def call(Map config) {
+    sh """
+        docker build -t ${config.image}:${config.tag} .
+        docker push ${config.image}:${config.tag}
+    """
 }
